@@ -1,0 +1,417 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    color: #999;
+    background-color: #222;
+}
+
+.content {
+    padding: 5% 0.5%;
+    margin: 0px auto;
+    max-width: 66%;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+#logo {
+    padding-top: 22px;
+    float: left;
+}
+
+#contain {
+    min-width: 465px;
+    margin-left: 16%;
+    margin-bottom: 50px;
+}
+
+#contain h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 150px;
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+#hButton {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #ddd;
+    color: black;
+    margin-top: 40px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+#hButton:hover {
+    background-color: #fff;
+}
+
+#hImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-bottom: none;
+    border-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+/* ------------==== Start of Navigation Bar ====------------ */
+
+.topnav {
+    position: fixed;
+    background-color: rgba(34, 34, 34, 0.8);
+    z-index: 100;
+    min-width: 765px;
+    width: 100%;
+}
+
+.topnav a {
+    font-size: 18px;
+    padding: 10px 2%;
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    min-width: 5%;
+}
+
+.topnav a:link,
+a:visited {
+    color: #999;
+}
+
+.topnav a:hover,
+.dropButton:hover {
+    border-bottom: 1px solid white;
+    color: white;
+    transition: color 0.2s ease-in, border 0.2s ease;
+}
+
+.topnav a.active {
+    color: white;
+}
+
+.topnav #accText {
+    color: #999;
+    font-size: 18px;
+    margin: 12px 10px 0px 0px;
+    float: left;
+}
+
+.spacing {
+    pointer-events: none;
+    cursor: default;
+}
+
+.active {
+    color: white;
+    pointer-events: none;
+    cursor: default;
+}
+
+.smallBar {
+    display: none;
+}
+
+
+/* ---= Dropdown Log-in Menu =--- */
+
+.dropdown {
+    display: block;
+    position: relative;
+    float: right;
+}
+
+.dropButton {
+    font-size: 18px;
+    font-family: inherit;
+    background: none;
+    padding: 12px 20px 10px 20px;
+    color: #999;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    min-width: 160px;
+    padding: 0px 20px 10px 20px;
+    margin: 10px 0px 0px 0px;
+    z-index: 1;
+}
+
+.dropContent input {
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 10px 15px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+.dropContent input:focus {
+    border-width: 2px;
+    border-color: cornflowerblue;
+    transition: border 0.1s ease-out;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        max-width: 80%;
+    }
+    #contain {
+        min-width: 260px;
+    }
+    .topnav {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        min-width: inherit;
+    }
+    .topnav a {
+        display: none;
+    }
+    .topnav #loginLink {
+        display: block;
+        margin: 10px 0px 0px 45px;
+        padding: 10px;
+    }
+    .smallBar {
+        display: block;
+        position: fixed;
+        width: 10%;
+    }
+    .dash {
+        width: 35px;
+        height: 5px;
+        background-color: #999;
+        margin: 6px 0;
+    }
+    .smallBar button {
+        border: none;
+        cursor: pointer;
+        background: none;
+        margin-top: 5px;
+    }
+    .dropMenu {
+        position: relative;
+        display: inline-block;
+    }
+    .menuContent {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+        margin: 10px 0px 0px 0px;
+        z-index: 100;
+        width: 220px;
+    }
+    .menuContent a {
+        display: block;
+        margin: 0% 10% 0% 0%;
+        padding: 20px 30px 20px 30px;
+    }
+    .menuContent a:hover {
+        border: none;
+    }
+    #contain h1 {
+        line-height: normal;
+        padding-top: 50px;
+    }
+    header {
+        max-width: 99.5%;
+    }
+}
+
+
+/* ------------==== End of Navigation Bar ====------------ */
+
+.link {
+    color: #999;
+    border-bottom: 2px solid #333;
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 100px;
+}
+
+.link:hover {
+    color: white;
+    border-bottom: 2px solid #555;
+    border-top: 2px solid #555;
+    border-left: 2px solid #555;
+    border-right: 2px solid #555;
+    background-color: rgba(100, 100, 100, 0.2);
+    transition: color 0.1s ease-in, border 0.1s ease-out, background 0.1s ease-in;
+}
+
+.inputStyle {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 10px 200px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inputStyle:focus {
+    border-width: 2px;
+    border-color: cornflowerblue;
+}
+
+#movieList {
+    float: right;
+    width: 40%;
+    margin-top: 150px;
+    padding-left: 1%;
+}
+
+.search {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    min-width: 300px;
+}
+
+@media screen and (max-width: 1200px) {
+    #movieList {
+        margin-top: 20%;
+    }
+}
+
+#textBlock h2 {
+    line-height: normal;
+    color: red;
+}
+
+#textBlock {
+    float: left;
+    width: 50%;
+}
+
+#loginLink {
+    background-color: #ddd;
+    color: black;
+    margin-left: 35px;
+    border: 1px solid;
+    border-radius: 7px;
+}
+
+#blocks {
+    float: left;
+    position: static;
+}
+
+.block {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    float: left;
+    margin: 20px 8px 0px 8px;
+    display: inline-block;
+    width: 30%;
+}
+
+.block img {
+    float: left;
+    margin-right: 18px;
+    position: relative;
+    top: 7px;
+    left: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .block {
+        width: 90%;
+    }
+    #movieList {
+        width: 90%;
+        float: left;
+    }
+}
+
+.submit {
+    background-color: white;
+    color: black;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#netflix:hover {
+    background-color: rgba(185, 9, 11, 0.7);
+    transition: background 0.1s ease-in;
+}
+
+#amazon:hover {
+    background-color: rgba(255, 153, 0, 0.7);
+    transition: background 0.1s ease-in;
+}
+
+#youtube:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    transition: background 0.1s ease-in;
+}
+
+#hulu:hover {
+    background-color: rgba(153, 204, 51, 0.7);
+    transition: background 0.1s ease-in;
+}
+
+li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    margin: 0px;
+    line-height: 2;
+}
+
+@media screen and (max-width: 500px) {
+    h1,
+    h2 {
+        margin: 0px 0px 30px 0px;
+        line-height: normal;
+    }
+}
+
+a {
+    color: inherit;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Links</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <script>
+        function showMenuDesktop() {
+            var desktop = document.getElementById("dropClick");
+            if (!desktop.style.display || desktop.style.display == "none") {
+                desktop.style.display = "block";
+            } else {
+                desktop.style.display = "none";
+            }
+        }
+
+        function showMenuMobile() {
+            var mobile = document.getElementById("dropTouch");
+            if (!mobile.style.display || mobile.style.display == "none") {
+                mobile.style.display = "block";
+            } else {
+                mobile.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="mailto:kstys97@gmail.com">Contact</a>
+        <a href="list.html">Build New List</a>
+        <div class="dropdown">
+            <p id="accText">Have an account?</p>
+            <button onclick="showMenuDesktop();" class="dropButton">Log in</button>
+            <div class="dropContent" id="dropClick">
+                <form>
+                    <br>
+                    <input type="text" name="email" placeholder="E-Mail"><br><br>
+                    <input type="password" name="password" placeholder="Password"><br><br><br> Stay signed in?
+                    <input type="checkbox" name="remember" style="margin: 5px 50px 0px 0px"><br>
+                    <input type="submit" value="Submit" style="position: absolute; margin: 10px 0px 0px 50px;"><br><br><br>
+                    <hr>
+                    <p style="text-align: center">Don't have a login?</p>
+                    <a href="login.html" id="loginLink">Sign-Up</a>
+                </form>
+            </div>
+        </div>
+        <div class="smallBar">
+            <button onclick="showMenuMobile()">
+                <div class="dash"></div>
+                <div class="dash"></div>
+                <div class="dash"></div>
+            </button>
+            <div id="dropTouch" class="menuContent">
+                <a href="index.html">Home</a>
+                <a href="mailto:kstys97@gmail.com">Contact</a>
+                <a href="list.html">Build New List</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Links!</h1>
+        <p>This is where a bunch of links for the final movie would be displayed.</p>
+        <ul>
+            <li><a href="http://netflix.com" class="link" id="netflix">NETFLIX</a></li>
+            <li><a href="http://amazon.com" class="link" id="amazon">AMAZON</a></li>
+            <li><a href="http://youtube.com" class="link" id="youtube">YOUTUBE</a></li>
+            <li><a href="http://hulu.com" class="link" id="hulu">HULU</a></li>
+        </ul>
+        <br>
+        <h2>Save your choices!</h2>
+        <p>You worked hard with democracy so why not save your choices and come back to your runner up movies? By signing up you can save all of your brackets and come back to them at a later time.</p>
+        <ul>
+            <a href="login.html" class="link">Sign-Up</a>
+        </ul>
+    </div>
+    <div style="position: static">
+        <p style="position: relative; bottom: 0; width:100%; text-align: center; float: left">
+            <a href="http://validator.w3.org/check?uri=http://www.tcnj.edu/~stysk1/links.html" style="display:inline-block">
+                <img src="http://www.w3.org/Icons/valid-xhtml10" height="31" width="88" alt="Valid XHTML 1.0!" />
+            </a>
+        </p>
+    </div>
+</body>
+</html>

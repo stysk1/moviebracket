@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MovieBracket</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <script>
+        function showMenuDesktop() {
+            var desktop = document.getElementById("dropClick");
+            if (!desktop.style.display || desktop.style.display == "none") {
+                desktop.style.display = "block";
+            } else {
+                desktop.style.display = "none";
+            }
+        }
+
+        function showMenuMobile() {
+            var mobile = document.getElementById("dropTouch");
+            if (!mobile.style.display || mobile.style.display == "none") {
+                mobile.style.display = "block";
+            } else {
+                mobile.style.display = "none";
+            }
+        }
+        /*window.onclick = function(event) {
+            if (!(event.target.matches(".dropButton") || event.target.matches(".dropContent"))) {
+                var drop = document.getElementsByClassName("dropContent");
+                var i;
+                for (i = 0; i < drop.length; i++) {
+                    var open = drop[i];
+                    if (open.classList.contains("show")) open.classList.remove("show");
+                }
+            }
+        }*/
+    </script>
+</head>
+
+<body>
+
+    <!--<h1>Test</h1>!-->
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="mailto:kstys97@gmail.com">Contact</a>
+        <a href="list.html">START BUILDING</a>
+        <div class="dropdown">
+            <p id="accText">Have an account?</p>
+            <button onclick="showMenuDesktop();" class="dropButton">Log in</button>
+            <div class="dropContent" id="dropClick">
+                <form>
+                    <br>
+                    <input type="text" name="email" placeholder="E-Mail"><br><br>
+                    <input type="password" name="password" placeholder="Password"><br><br><br> Stay signed in?
+                    <input type="checkbox" name="remember" style="margin: 5px 50px 0px 0px"><br>
+                    <input type="submit" value="Submit" style="position: absolute; margin: 10px 0px 0px 50px;"><br><br><br>
+                    <hr>
+                    <p style="text-align: center">Don't have a login?</p>
+                    <a href="login.html" id="loginLink">Sign-Up</a>
+                </form>
+            </div>
+        </div>
+        <div class="smallBar">
+            <button onclick="showMenuMobile()">
+                <div class="dash"></div>
+                <div class="dash"></div>
+                <div class="dash"></div>
+            </button>
+            <div id="dropTouch" class="menuContent">
+                <a href="index.html" class="active">Home</a>
+                <a href="mailto:kstys97@gmail.com">Contact</a>
+                <a href="list.html">START BUILDING</a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1>Make your choice of what movie to watch so much simpler</h1>
+        <a href="list.html" id="hButton">Get Started</a>
+        <img src="img/Example.png" height="400" width="800" id="hImg">
+    </header>
+    <div id="contain">
+        <img id="logo" src="img/logo.png" height="100" width="200">
+    </div>
+    <div class="content">
+        <h2> <b>Welcome to MovieBracket!</b></h2><p>Do you have a list of movies to watch and you are also incredibly indecisive? You came to the right place! MovieBracket makes this decision for you by making a bracket off of your list and allowing you to easily see reviews and trailers for the randomly paired movies you want to watch. You can click on the voting counters for each person who votes on the movie and click done to progress. Let's get started!</p>
+        <h2>Sign-Up!</h2>
+        <p>Signing up for MovieBracket gives you the opportunity to save your previous brackets so you can remember how you came to the winning movie. It doesn't end there though! Just because you found a winner doesn't mean you should forget about the rest of the movies you chose! Grab the links for your second or third choice movie as well because they made it that far too!</p>
+        <a href="login.html" class="link">Sign-Up</a>
+        <div id="blocks">
+            <br>
+            <h2>How to Create the Bracket</h2>
+            <p class="block"><img src="img/Transport-Rocket-icon.png" height="40px" width="40px"><b style="font-size: 20px">Getting Started</b><br>Think of some movies that you want to watch in your party of friends or solo party. Plug some movie titles into the list and this program will generate the rest for you!</p>
+            <p class="block"><img src="img/Very-Basic-Idea-icon.png" height="40px" width="40px"><b style="font-size: 20px">The Idea</b><br>I plan on designing this using some advanced CSS to make the bracket look pretty and functional. Links in the future will link to the actual winner.</p>
+            <p class="block"><img src="img/Programming-Edit-Property-icon.png" height="40px" width="40px"><b style="font-size: 20px">Sign-Up!</b><br>Go ahead, sign up for our service! It's free! If you make an account on here you have the added benefit of your previous brackets and options being saved for future reference.</p>
+        </div>
+
+    </div>
+    <!-- Styled on HTML strictly because it is specific to this element alone on each page. TODO: add CSS style for this particular element -->
+    <div style="position: static">
+        <p style="position: relative; bottom: 0; width:100%; text-align: center; float: left">
+            <a href="http://validator.w3.org/check?uri=http://www.tcnj.edu/~stysk1/index.html" style="display:inline-block">
+                <img src="http://www.w3.org/Icons/valid-xhtml10" height="31" width="88" alt="Valid XHTML 1.0!" />
+            </a>
+        </p>
+    </div>
+</body>
+</html>
