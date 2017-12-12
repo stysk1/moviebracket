@@ -36,6 +36,7 @@ html {
 body {
     background-color: #222;
     font-family: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
 }
 
 .container {
@@ -43,6 +44,7 @@ body {
     min-width: 18em;
     margin: 0px auto;
 }
+
 
 /* ------------==== Start of Navigation Bar ====------------ */
 
@@ -441,6 +443,7 @@ h2 {
     cursor: pointer;
     -webkit-transition: padding 0.2s ease-in-out, border 0.2s linear;
     transition: padding 0.2s ease-in-out, border 0.2s linear;
+    z-index: 1;
 }
 
 .tournament-bracket__match:focus {
@@ -632,10 +635,12 @@ h2 {
 .tournament-bracket__table {
     width: 100%;
 }
+
 .tournament-bracket__submit {
     padding-top: 5%;
     padding-left: 45%;
 }
+
 .tournament-bracket__caption {
     font-size: 0.8rem;
     color: #BDBDBD;
@@ -758,12 +763,17 @@ h2 {
     font-size: 0.95rem;
     background-color: #F5F5F5;
     border-color: #dddddd;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; 
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 .tournament-bracket__team--winner .tournament-bracket__number {
@@ -771,14 +781,90 @@ h2 {
     border-color: #fad674;
 }
 
-#semi_1{
+#semi_1 {
     visibility: hidden;
 }
-#semi_2{
+
+#semi_2 {
     visibility: hidden;
 }
-#final{
+
+#final {
     visibility: hidden;
+}
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    transition: filter 0.5s ease;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(100, 100, 100, .5);
+    z-index: 999;
+}
+
+.matchup {
+    display: inline-block;
+    margin: 10% auto;
+    background-color: #ffffff;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 0.1em;
+    box-shadow: 0 2px 0 0 #e5e5e5;
+    outline: none;
+    text-align: center;
+}
+
+.matchup a {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.leftMovie {
+    float: left;
+    margin-right: 50px;
+}
+
+.rightMovie {
+    float: right;
+    margin-left: 50px;
+}
+
+p.rightMovie {
+    margin-left: 0;
+}
+
+p.leftMovie {
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+span.rightMovie {
+    margin-left: 0;
+    margin-top: 20px;
+    transform: translate(130px, 0px);
+}
+
+span.leftMovie {
+    margin-left: 0;
+    margin-top: 20px;
+    transform: translate(-60px, 0px);
+}
+
+@media screen and (max-width: 768px) {
+    .leftMovie {
+        margin: 0;
+    }
 }
 
 .tournament-bracket__medal {
@@ -797,10 +883,10 @@ h2 {
     color: #CD7F32;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     line-height: normal;
 }
 
-#generated {
-    
-}
+#generated {}

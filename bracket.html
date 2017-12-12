@@ -68,8 +68,9 @@
                 return "fourteenth";
             }
         }
-        
+
         var counterArray = [];
+
         function clickCounter(count, dir) {
             if (counterArray[count] == null && dir == "up") {
                 counterArray[count] = 1;
@@ -115,7 +116,8 @@
             }
         }
         var voteRevealSemi = [0, 0, 0, 0, 0, 0, 0, 0];
-        var voteRevealFinal = [0,0,0,0];
+        var voteRevealFinal = [0, 0, 0, 0];
+
         function reveal(count, round) {
             if (round == "semi") {
                 var semi_1 = document.getElementById("semi_1");
@@ -128,12 +130,25 @@
                     semi_2.style.visibility = "visible";
                 }
             }
-            if(round == "final"){
+            if (round == "final") {
                 var final = document.getElementById("final");
                 voteRevealFinal[count] = 1;
                 if (voteRevealFinal[0] && voteRevealFinal[1] && voteRevealFinal[2] && voteRevealFinal[3]) {
                     final.style.visibility = "visible";
                 }
+            }
+            return;
+        }
+
+        function blur(state) {
+            var main = document.getElementById("mainContent");
+            var overlay = document.getElementById("overlay");
+            if (state) {
+                overlay.style.display = "block";
+                main.setAttribute("class", "container blur");
+            } else {
+                overlay.style.display = "none";
+                main.setAttribute("class", "container");
             }
             return;
         }
@@ -175,7 +190,22 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div id="overlay">
+        <div class="matchup">
+            <p>MATCHUP</p><br>
+            <img class="leftMovie" src="img/movies/godfather.jpg" alt="The Godfather" width="200" height="300">
+            <img class="rightMovie" src="img/movies/shawshank.jpg" alt="The Godfather" width="200" height="300">
+            <br>
+            <p class="leftMovie">The Godfather</p>
+                <span class="tournament-bracket__number leftMovie" id="first" onclick="clickCounter(0,'up'); reveal(0, 'semi');" oncontextmenu="clickCounter(0,'down');return false;">0</span>
+            <p class="rightMovie">The Shawshank Redemption</p>
+                <span class="tournament-bracket__number rightMovie" id="second" onclick="clickCounter(1,'up'); reveal(1, 'semi');" oncontextmenu="clickCounter(1,'down');return false;">0</span>
+            <br>
+            <p style="user-select: none;">_________________________________________________________</p>
+            <br><a href="javascript:blur(0)">Back to Bracket</a>
+        </div>
+    </div>
+    <div class="container" id="mainContent">
         <br><br><br><br>
         <h1>MovieBracket</h1>
         <h2>* Your generated movie bracket *
@@ -188,11 +218,11 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-18">18 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
-                                        <th>Country</th>
+                                        <th>Movie</th>
                                         <th>Score</th>
                                     </tr>
                                 </thead>
@@ -227,7 +257,7 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-18">18 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
@@ -262,7 +292,7 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-18">18 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
@@ -298,7 +328,7 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-18">18 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
@@ -338,7 +368,7 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-20">20 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
@@ -374,7 +404,7 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-20">20 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
@@ -457,7 +487,7 @@
                         <div class="tournament-bracket__match" tabindex="0">
                             <table class="tournament-bracket__table">
                                 <caption class="tournament-bracket__caption">
-                                    <time datetime="1998-02-22">22 February 1998</time>
+                                    <a href="javascript:blur(1)">View Matchup</a>
                                 </caption>
                                 <thead class="sr-only">
                                     <tr>
@@ -501,15 +531,5 @@
             <a href="links.html" class="link" id="generated">Links!</a>
         </p>
     </div>
-    <br><br><br><br><br>
-    <div style="position: static">
-        <p style="position: relative; bottom: 0; width:100%; text-align: center; float: left">
-            <a href="http://validator.w3.org/check?uri=http://www.tcnj.edu/~stysk1/bracket.html" style="display:inline-block">
-                <img src="http://www.w3.org/Icons/valid-xhtml10" height="31" width="88" alt="Valid XHTML 1.0!" />
-            </a>
-        </p>
-    </div>
-
-
 </body>
 </html>
